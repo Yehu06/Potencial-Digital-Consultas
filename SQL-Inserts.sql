@@ -3,29 +3,29 @@ USE Potencial_Digital_SQL;
 ----------------------------------
 -- INSERTS TABLA charla
 ----------------------------------
-INSERT INTO charla (idCharla, Nombre, informacion_adicional, puntuacion_media)
+INSERT INTO charla (Nombre, informacion_adicional, puntuacion_media)
 VALUES
-(1, 'Introducción a la Inteligencia Artificial', 'Charla básica sobre IA', 8.50),
-(2, 'Ciberseguridad para principiantes', 'Conceptos clave de seguridad informática', 7.80),
-(3, 'Desarrollo Web Moderno', 'HTML, CSS y JavaScript en 2025', 9.20);
+('IntroducciÃ³n a la Inteligencia Artificial', 'Charla bÃ¡sica sobre IA', 8.50),
+('Ciberseguridad para principiantes', 'Conceptos clave de seguridad informÃ¡tica', 7.80),
+('Desarrollo Web Moderno', 'HTML, CSS y JavaScript en 2025', 9.20);
 
 ----------------------------------
 -- INSERTS TABLA usuarios
 ----------------------------------
 INSERT INTO usuarios (Nombre, Telefono)
 VALUES
-('Carlos Pérez', '600123456'),
-('Ana Gómez', '600987654'),
-('Luis Martínez', '600555444');
+('Carlos PÃ©rez', '600123456'),
+('Ana GÃ³mez', '600987654'),
+('Luis MartÃ­nez', '600555444');
 
 ----------------------------------
 -- INSERTS TABLA ponentes
 ----------------------------------
 INSERT INTO ponentes (nombre, sueldo)
 VALUES
-('María López', 1800.50),
+('MarÃ­a LÃ³pez', 1800.50),
 ('Javier Torres', 2100.00),
-('Lucía Fernández', 1950.75);
+('LucÃ­a FernÃ¡ndez', 1950.75);
 
 ----------------------------------
 -- INSERTS TABLA fechas
@@ -66,3 +66,4 @@ VALUES
 (1, 2),
 (2, 3),
 (3, 2);
+
