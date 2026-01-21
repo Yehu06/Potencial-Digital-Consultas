@@ -3,7 +3,7 @@ USE Potencial_Digital_SQL;
 
 -- Estructura de tabla charla
 CREATE TABLE charla (
-  idCharla smallint primary key NOT NULL,
+  idCharla smallint primary key NOT NULL identity(1,1),
   Nombre varchar(80) NOT NULL,
   informacion_adicional varchar(max) null,
   puntuacion_media decimal(4,2) check (puntuacion_media between 1 and 10) --Comprueba que la puntuacion media se de una nota entre el 1 y el 10 (incluidos)
@@ -32,4 +32,5 @@ CREATE TABLE fechas(
 fecha date not null primary key,
 
 );
+
 
