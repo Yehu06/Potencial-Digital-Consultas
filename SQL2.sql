@@ -8,6 +8,7 @@ CREATE TABLE asistencia (
    FOREIGN KEY (idcharla) REFERENCES charla (idCharla) ON DELETE CASCADE ON UPDATE CASCADE,
    FOREIGN KEY (idusuario) REFERENCES usuarios (idUsuario) ON DELETE CASCADE ON UPDATE CASCADE,
     PRIMARY KEY (idcharla, idusuario)
+
     
 );
 
@@ -19,6 +20,8 @@ hora time not null,
 FOREIGN KEY (idcharla) REFERENCES charla (idCharla) ON DELETE CASCADE ON UPDATE CASCADE,
 FOREIGN KEY (fecha) REFERENCES fechas (fecha) ON DELETE CASCADE ON UPDATE CASCADE,
 PRIMARY KEY (idcharla, fecha,hora)
+
+    --Una charla se puede repetir en varias fechas/horas
   
 );
 
@@ -33,3 +36,4 @@ PRIMARY KEY (idcharla,idponente)
 );
 
 
+--Los on delete y on update son  para que si se modifica o borra un registro en la tabla padre, este tambien borrara o modificara todo los registros relacionados en la tabla hijo (que son estas 3)
