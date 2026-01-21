@@ -6,7 +6,7 @@ CREATE TABLE charla (
   idCharla smallint primary key NOT NULL,
   Nombre varchar(80) NOT NULL,
   informacion_adicional varchar(max) null,
-  puntuacion_media decimal(4,2) check (puntuacion_media between 1 and 10)
+  puntuacion_media decimal(4,2) check (puntuacion_media between 1 and 10) --Comprueba que la puntuacion media se de una nota entre el 1 y el 10 (incluidos)
 );
 
 -- Estructura de tabla usuarios
@@ -14,7 +14,7 @@ CREATE TABLE usuarios (
   idUsuario smallint primary key NOT NULL IDENTITY(1,1),
   Nombre varchar(80) NOT NULL,
   Telefono char(9) NOT NULL,
-  CONSTRAINT Id_telefono UNIQUE (Telefono)
+  CONSTRAINT Id_telefono UNIQUE (Telefono) --Cada persona tiene un telefono exclusivo para el, por eso ponemos unique
 );
 
 
@@ -32,3 +32,4 @@ CREATE TABLE fechas(
 fecha date not null primary key,
 
 );
+
